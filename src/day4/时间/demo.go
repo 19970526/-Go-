@@ -19,4 +19,5 @@ func main() {
 	fmt.Println(date.Format("2006-01-02 15:04:05"))
 	fmt.Println(date.Format("2006/1/2"))
 	fmt.Println(date.Format("2006/1/2 15:04:05"))
+	// Go语言的发明时间是2006年1月2日15点零4分零5秒，简单记成2006,1,2,3,4,5
 }
