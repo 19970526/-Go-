@@ -1,18 +1,21 @@
 package class_test
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 //定义接口
 type P interface {
-	GetName() string
+	GetName(job string) string
 }
 
 type Student2 struct {
 	name string
 }
 
-func (s *Student2) GetName() string {
-	return s.name
+func (s *Student2) GetName(job string) string {
+	return fmt.Sprintf("I'm a %s,my name is %s", job, s.name)
 }
 
 func TestInterface(t *testing.T) {
@@ -20,5 +23,5 @@ func TestInterface(t *testing.T) {
 
 	s = &Student2{name: "James"}
 
-	t.Log(s.GetName())
+	t.Log(s.GetName("student"))
 }

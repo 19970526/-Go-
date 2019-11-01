@@ -21,5 +21,6 @@ func (a *Apple) Say() {
 
 func TestInherit(t *testing.T) {
 	obj := new(Apple)
-	obj.Say()
+	obj.Say() // I am an apple
+	obj.f.Say()// I am a kind of fruit
 }
